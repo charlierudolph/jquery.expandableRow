@@ -1,14 +1,14 @@
-# JQuery Expandable Row
+# jQuery Expandable Row
 
 A simple jquery plugin that allows you to easily setup tables with expandable rows
 
 ## Usage
 
-1. Grab the source from the lib directory.
-2. Include the script in your application after jQuery.
+1. Grab the source from the lib directory
+2. Include the script in your application after jQuery
 3. `$('table').expandableRow(onRowClick)`
 
-### onRowClick
+#### onRowClick
 
 `onRowClick` should be a function that takes in two arguments.
   + the clicked row (a JQuery object)
@@ -17,18 +17,18 @@ A simple jquery plugin that allows you to easily setup tables with expandable ro
     - Otherwise it will be wrapped in a table cell with a colspan to give it full width and then wrapped in a table row.
 
 ```coffeescript
-onRowClick = ($row, expand) ->
-  expand("Expanded Content for #{$row.data('id')}")
+onRowClick = ($row, cb) ->
+  cb("Expanded Content for #{$row.data('id')}")
 ```
 
 Expand can be called multiple times and will replace the content.
 Here is an example where we show an expanded loading row and then show the expanded content after it has been loaded via ajax.
 
 ```coffeescript
-onRowClick = ($row, expand) ->
-  expand("<div class="loading"><div>")
+onRowClick = ($row, cb) ->
+  cb("<div class="loading"><div>")
   $.ajax "/content/#{$row.data('id')}",
-    success: (data) => expand(data)
+    success: (data) => cb(data)
 ```
 
 ## Contributing
