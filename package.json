@@ -1,0 +1,25 @@
+{
+  "name": "jquery.expandableRow",
+  "version": "0.0.1",
+  "description": "A lightweight jQuery plugin for expanding rows in a table.",
+  "main": "lib/jquery.expandableRow.js'",
+  "author": "Charles Rudolph",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/charlierudolph/jquery.expandableRow.git"
+  },
+  "scripts": {
+    "test": "gulp build && mycha run"
+  },
+  "devDependencies": {
+    "coffee-script": "latest",
+    "gulp": "latest",
+    "gulp-coffee": "latest",
+    "gulp-rename": "latest",
+    "gulp-uglify": "latest",
+    "jsdom": "latest",
+    "jquery": "latest",
+    "mycha": "latest"
+  }
+}
