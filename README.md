@@ -26,7 +26,7 @@ Here is an example where we show an expanded loading row and then show the expan
 
 ```coffeescript
 onRowClick = ($row, cb) ->
-  cb("<div class="loading"><div>")
+  cb('<div class="loading"><div>')
   $.ajax "/content/#{$row.data('id')}",
     success: (data) => cb(data)
 ```
