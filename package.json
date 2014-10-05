@@ -10,10 +10,11 @@
     "url": "git://github.com/charlierudolph/jquery.expandableRow.git"
   },
   "scripts": {
-    "test": "gulp build && mycha run"
+    "test": "coffeelint src/jquery.expandableRow.coffee && gulp build && mycha run"
   },
   "devDependencies": {
     "coffee-script": "latest",
+    "coffeelint": "latest",
     "gulp": "latest",
     "gulp-coffee": "latest",
     "gulp-rename": "latest",
