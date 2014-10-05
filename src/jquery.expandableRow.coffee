@@ -39,6 +39,6 @@ onRowClick = ($table, callback, event) ->
 $.fn.extend
 
   expandableRow: (callback) ->
-    @each (i, table) =>
+    @each (i, table) ->
       $table = $(table)
       $table.on 'click', 'tbody tr', onRowClick.bind(null, $table, callback)
